@@ -1,84 +1,211 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <title>Ridhoo Website</title>
-  <style>
-    body {
-      margin:0;
-      background:#0e0e15;
-      color:white;
-      font-family:sans-serif;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-   <!DOCTYPE html>
-<html lang="id">
-<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ridhoo Gaming</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-
 <style>
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
 }
 
 body{
-height:100vh;
-background:linear-gradient(135deg,#0f0f1b,#1a1a2e);
-display:flex;
-justify-content:center;
-align-items:center;
-color:white;
+    background:#0e0e17;
+    color:white;
 }
 
-.card{
-background:rgba(255,255,255,0.05);
-backdrop-filter:blur(15px);
-padding:40px;
-border-radius:20px;
-text-align:center;
-box-shadow:0 0 40px rgba(0,255,255,0.2);
+/* HERO SECTION */
+.hero{
+    height:100vh;
+    background:url('https://images.unsplash.com/photo-1605902711622-cfb43c4437d1') center/cover no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    position:relative;
 }
 
-h1{
-font-size:32px;
-margin-bottom:10px;
+.hero::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.7);
 }
 
-p{
-opacity:0.7;
-margin-bottom:20px;
+.hero-content{
+    position:relative;
+    z-index:2;
 }
 
-button{
-padding:10px 20px;
-border:none;
-border-radius:30px;
-background:cyan;
-color:black;
-font-weight:bold;
-cursor:pointer;
-transition:0.3s;
+.hero h1{
+    font-size:40px;
+    letter-spacing:2px;
 }
 
-button:hover{
-background:white;
+.hero p{
+    margin-top:10px;
+    opacity:0.8;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 30px;
+    border-radius:30px;
+    background:cyan;
+    color:black;
+    font-weight:bold;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:white;
+    transform:scale(1.05);
+}
+
+/* PROFILE SECTION */
+.profile{
+    padding:60px 20px;
+    text-align:center;
+}
+
+.avatar{
+    width:150px;
+    border-radius:50%;
+    border:4px solid cyan;
+    box-shadow:0 0 20px cyan;
+}
+
+.profile h2{
+    margin-top:20px;
+}
+
+/* STATS */
+.stats{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    margin-top:30px;
+    flex-wrap:wrap;
+}
+
+.stat-box{
+    background:#1a1a2e;
+    padding:20px;
+    border-radius:15px;
+    width:150px;
+    box-shadow:0 0 15px rgba(0,255,255,0.3);
+}
+
+.stat-box h3{
+    font-size:22px;
+    color:cyan;
+}
+
+/* HERO FAVORIT */
+.heroes{
+    padding:60px 20px;
+    text-align:center;
+}
+
+.hero-list{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-top:30px;
+}
+
+.hero-card{
+    background:#1a1a2e;
+    padding:15px;
+    border-radius:15px;
+    width:160px;
+    transition:0.3s;
+}
+
+.hero-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 20px cyan;
+}
+
+.hero-card img{
+    width:100%;
+    border-radius:10px;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:#111;
+    opacity:0.6;
 }
 </style>
 </head>
 
 <body>
-<div class="card">
-<h1>🔥 RIDHOO GAMING 🔥</h1>
-<p>Mobile Legends Player | Indonesia</p>
-<button>Follow Me</button>
-</div>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>🔥 RIDHOO GAMING 🔥</h1>
+        <p>Mythic Mobile Legends Player | Indonesia</p>
+        <a href="#" class="btn">Follow Me</a>
+    </div>
+</section>
+
+<!-- PROFILE -->
+<section class="profile">
+    <img class="avatar" src="https://i.pravatar.cc/300" alt="profile">
+    <h2>About Me</h2>
+    <p>Passionate gamer, fokus push rank dan tournament kecil-kecilan.</p>
+
+    <div class="stats">
+        <div class="stat-box">
+            <h3>1200+</h3>
+            <p>Matches</p>
+        </div>
+        <div class="stat-box">
+            <h3>Mythic</h3>
+            <p>Rank</p>
+        </div>
+        <div class="stat-box">
+            <h3>65%</h3>
+            <p>Win Rate</p>
+        </div>
+    </div>
+</section>
+
+<!-- HERO FAVORIT -->
+<section class="heroes">
+    <h2>Hero Favorit</h2>
+
+    <div class="hero-list">
+        <div class="hero-card">
+            <img src="https://static.wikia.nocookie.net/mobile-legends/images/6/6a/Gusion.png">
+            <p>Gusion</p>
+        </div>
+
+        <div class="hero-card">
+            <img src="https://static.wikia.nocookie.net/mobile-legends/images/f/f0/Ling.png">
+            <p>Ling</p>
+        </div>
+
+        <div class="hero-card">
+            <img src="https://static.wikia.nocookie.net/mobile-legends/images/4/4b/Chou.png">
+            <p>Chou</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    © 2026 Ridhoo Gaming. All Rights Reserved.
+</footer>
+
 </body>
 </html>
